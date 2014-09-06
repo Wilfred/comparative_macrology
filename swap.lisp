@@ -1,3 +1,5 @@
+;; Tested on SBCL
+
 (defmacro swap (x y)
   (let ((tmp-sym (gensym)))
     `(let (,tmp-sym)

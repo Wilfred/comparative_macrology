@@ -1,3 +1,5 @@
+;; Tested on SBCL
+
 (defmacro map-it (list &rest body)
   `(loop for it in ,list
       do ,@body))

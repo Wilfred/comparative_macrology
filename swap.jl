@@ -1,8 +1,10 @@
+# Test on Julia 0.3
+
 macro swap!(x, y)
     quote
-        local tmp = $(esc(y))
-        $x = $(esc(y))
-        $y = tmp
+        tmp = $(esc(x))
+        $(esc(x)) = $(esc(y))
+        $(esc(y)) = tmp
     end
 end
 
@@ -11,5 +13,4 @@ b = 2
 
 @swap!(a, b)
 
-# prints: a: 1, b: 2
 println("a: $a, b: $b")

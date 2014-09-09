@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 #define SWAP(x, y) {        \
-        typeof (x) tmp = y; \
-        y = x;              \
-        x = tmp;            \
+        typeof (x) tmp = x; \
+        x = y;              \
+        y = tmp;            \
     }
 
 int main() {

@@ -3,9 +3,9 @@
 (defmacro swap (x y)
   (let ((tmp-sym (gensym)))
     `(let (,tmp-sym)
-       (setf ,tmp-sym ,y)
-       (setf ,y ,x)
-       (setf ,x ,tmp-sym))))
+       (setf ,tmp-sym ,x)
+       (setf ,x ,y)
+       (setf ,y ,tmp-sym))))
 
 (defun use-swap ()
   (let ((a 1)

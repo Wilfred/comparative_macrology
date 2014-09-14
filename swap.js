@@ -1,5 +1,5 @@
 // Compile with:
-// $ sjs -o output.js swap.js
+// $ sjs -o output.js swap.js --readable-names
 // Run with:
 // $ node output.js
 

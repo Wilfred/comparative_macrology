@@ -1,11 +1,14 @@
 // Compile with:
 // $ sjs -o output.js swap.js
+// Run with:
+// $ node --harmony output.js
+// (requires appending "use strict";)
 
 macro swap {
     rule { ($x, $y) } => {
         let tmp = $x;
         $x = $y;
-        $y = $x;
+        $y = tmp;
     }
 }
 

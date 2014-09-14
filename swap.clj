@@ -9,7 +9,7 @@
 (def b (ref 2))
 
 (my-swap! a b)
-(pr "a")
-(pr @a)
-(pr "b")
-(pr @b)
+(prn "a")
+(prn @a)
+(prn "b")
+(prn @b)

@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-#define SWAP(x, y) {        \
-        typeof (x) tmp = x; \
-        x = y;              \
-        y = tmp;            \
+#define SWAP(x, y) {                            \
+        typeof (x) x##y = x;                    \
+            x = y;                              \
+            y = x##y;                           \
     }
 
 int main() {
@@ -11,10 +11,6 @@ int main() {
     int b = 2;
     SWAP(a, b);
     printf("a: %d, b: %d\n", a, b);
-
-    float arr[2] = {3.0, 4.0};
-    SWAP(arr[0], arr[1]);
-    printf("arr[0]: %f, arr[1]: %f\n", arr[0], arr[1]);
 
     return 0;
 }
